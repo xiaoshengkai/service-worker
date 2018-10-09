@@ -7,7 +7,7 @@ console.log(headers.get('Service-Worker-Allowed'));
 
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker/sw.js', { scope: '/service-worker' })
+    navigator.serviceWorker.register('/service-worker/sw.js')
     .then(reg => {
         if(reg.installing) {
             console.log('Service worker installing');
