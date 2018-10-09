@@ -1,14 +1,14 @@
 var imgs = []
 var cachesName = 'c1'
 for(var i = 0; i< 10; i++) {
-    imgs.push('/images/筑基丹 - 副本 ('+ i +').jpg')
+    imgs.push('/service-worker/images/筑基丹 - 副本 ('+ i +').jpg')
 }
 var cachesData = imgs.concat([
-    '/jquery.js',
-    '/app.js',
-    '/img_list.js',
-    '/index.html',
-    '/images/t.gif'
+    '/service-worker/jquery.js',
+    '/service-worker/app.js',
+    '/service-worker/img_list.js',
+    '/service-worker/index.html',
+    '/service-worker/images/t.gif'
 ])
 
 // 安装 install 事件监听器
@@ -51,7 +51,7 @@ self.addEventListener('fetch', event => {
             })
         }).catch(function() {
             // 匹配不到也要放回给他默认的
-            return caches.match('images/t.gif')
+            return caches.match('/service-workerimages/t.gif')
         })
     );
 });

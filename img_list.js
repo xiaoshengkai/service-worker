@@ -13,6 +13,6 @@ var imgs = []
 for(let i = 0; i< 100; i++) {
     imgs.push({
         name: i,
-        url: '/images/筑基丹 - 副本 ('+ i +').jpg'
+        url: '/service-worker/images/筑基丹 - 副本 ('+ i +').jpg'
     })
 }
