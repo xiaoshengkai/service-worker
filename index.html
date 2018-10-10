@@ -5,61 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+    var scope = '/service-worker'    // 域
+    // var scope = ''
+    // 图片地址数据
+    var imgs = []
+    for(let i = 0; i< 100; i++) {
+        imgs.push({
+            name: i,
+            url: scope + '/images/筑基丹 - 副本 ('+ i +').jpg'
+        })
+    }
+    </script>
 </head>
 <body>
-    <img src="/service-worker/images/筑基丹 - 副本 (1).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (2).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (3).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (4).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (5).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (6).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (7).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (8).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (9).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (10).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (11).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (12).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (13).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (14).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (15).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (16).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (17).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (18).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (19).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (20).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (21).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (22).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (23).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (24).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (25).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (26).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (27).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (28).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (29).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (30).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (31).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (32).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (33).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (34).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (35).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (36).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (37).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (38).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (39).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (40).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (41).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (42).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (43).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (44).jpg" alt="">
-    <img src="/service-worker/images/筑基丹 - 副本 (45).jpg" alt="">
-    <!-- <script src="jquery.js"></script> -->
-    <!-- <script src="jquery-ajax-blob-arraybuffer.js"></script> -->
-    <script src="/service-worker/img_list.js"></script>
-    <script src="/service-worker/app.js"></script>
-    <!-- <script>
+    <!-- <script src="/service-worker/img_list.js"></script>
+    <script src="/service-worker/app.js"></script> -->
+    <script src="/app.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery-ajax-blob-arraybuffer.js"></script>
+    <script>
         for(var i = 0; i< imgs.length; i++) {
             $('body').append('<img src="'+ imgs[i].url +'" alt="">')
         }
-    </script> -->
+    </script>
 </body>
 </html>
