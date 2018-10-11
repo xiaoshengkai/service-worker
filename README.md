@@ -1,6 +1,6 @@
 # service-worker
 
-[在线预览地址](https://note.youdao.com/)
+[在线预览地址](https://xiaoshengkai.top/service-worker/)
 
 含义：瀏覽器為JavaScript提供了多線程能力—— Web worker
 
