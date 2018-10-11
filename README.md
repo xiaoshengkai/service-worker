@@ -79,6 +79,13 @@ Service worker也是一種Web Worker，只是它的能力比一般的Web worker�
 
 ```
 
+
+> 这里注册的时候有一个域的问题
+
+```
+navigator.serviceWorker.register(scope + '/sw.js') 这里sw.js的文件路径是相对于站点路径，不是当前文件路径
+```
+
 #### 2. 安装
 
 这个阶段可以 实现预缓存以及缓存更新，这里涉及到 
