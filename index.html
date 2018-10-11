@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/service-worker/manifest.json" />
     <script>
-    // var scope = '/service-worker'    // 域
-    var scope = ''
+    var scope = '/service-worker'    // 域
+    // var scope = ''
     // 图片地址数据
     var imgs = []
     for(let i = 0; i< 100; i++) {
@@ -20,11 +20,11 @@
     </script>
 </head>
 <body>
-    <!-- <script src="/service-worker/jquery.js"></script>
-    <script src="/service-worker/app.js"></script> -->
-    <script src="/app.js"></script>
+    <script src="/service-worker/jquery.js"></script>
+    <script src="/service-worker/app.js"></script>
+    <!-- <script src="/app.js"></script>
     <script src="/jquery.js"></script>
-    <script src="jquery-ajax-blob-arraybuffer.js"></script>
+    <script src="jquery-ajax-blob-arraybuffer.js"></script> -->
     <script>
         for(var i = 0; i< imgs.length; i++) {
             $('body').append('<img src="'+ imgs[i].url +'" alt="">')

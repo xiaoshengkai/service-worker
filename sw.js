@@ -1,7 +1,7 @@
 var imgs = []
 var CACHESNAME = 'A5'
-// var scope = '/service-worker'    // 域
-var scope = ''
+var scope = '/service-worker'    // 域
+// var scope = ''
 
 for(var i = 0; i< 100; i++) {
     imgs.push(scope + '/images/筑基丹 - 副本 ('+ i +').jpg')
