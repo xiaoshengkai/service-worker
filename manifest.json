@@ -1,0 +1,19 @@
+{
+    "name": "小盛开牛逼",
+    "short_name": "小盛开牛逼",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "orientation": "portrait",
+    "description": "小盛开牛逼工作平台",
+    "icons": [{
+        "src": "https://s2.imgbeiliao.com/assets/imgs/icons/app/1.0.0/parent-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+    }, {
+        "src": "https://s2.imgbeiliao.com/assets/imgs/icons/app/1.0.0/parent-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+    }]
+}

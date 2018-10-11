@@ -1,14 +1,14 @@
 var imgs = []
-var cachesName = 'c1'
-var scope = '/service-worker'    // 域
-// var scope = ''
+var CACHESNAME = 'A5'
+// var scope = '/service-worker'    // 域
+var scope = ''
 
-for(var i = 0; i< 10; i++) {
+for(var i = 0; i< 100; i++) {
     imgs.push(scope + '/images/筑基丹 - 副本 ('+ i +').jpg')
 }
 var cachesData = imgs.concat([
-    scope + '/jquery.js',
-    scope + '/app.js',
+    // scope + '/jquery.js',
+    // scope + '/app.js',
     // scope + '/index.html',
     scope + '/images/t.gif'
 ])
@@ -18,17 +18,27 @@ var cachesData = imgs.concat([
 // 预缓存
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(cachesName)
-        // 获取缓存 a1, 并加入缓存地址
-        .then(cache => {
-            for(let i = 0; i< cachesData.length; i++) {
-                fetch(cachesData[i]).then(function (response) {     // 这部分代码等于 cache.add()
-                    if (!response.ok) {
-                        throw new TypeError('bad response status');
-                    }
-                    return cache.put(cachesData[i], response);  
-                })
-            }
+        // 注册之前清理无用（版本不匹配cache）
+        caches.keys().then(list => {
+            list.forEach(key => {
+                if (CACHESNAME !== key) {
+                    caches.delete(key)
+                }
+            })
+        })
+        .then(() => {
+            caches.open(CACHESNAME)
+            // 获取缓存 a1, 并加入缓存地址
+            .then(cache => {
+                for(let i = 0; i< cachesData.length; i++) {
+                    fetch(cachesData[i]).then(function (response) {     // 这部分代码等于 cache.add()
+                        if (!response.ok) {
+                            throw new TypeError('bad response status');
+                        }
+                        return cache.put(cachesData[i], response);  
+                    })
+                }
+            })
         })
         // 更新：新的 Service worker 馬上生效
         .then(() => {
@@ -50,7 +60,7 @@ self.addEventListener('fetch', event => {
                 // 克隆返回结果
                 let responseClone = response.clone()
                 // 保存到cahce
-                caches.open(cachesName).then(cache => {
+                caches.open(CACHESNAME).then(cache => {
                     cache.put(event.request, responseClone)
                 })
                 return response
